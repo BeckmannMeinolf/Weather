@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherVC.swift
 //  Weather
 //
 //  Created by Meinolf Beckmann on 28.02.18.
@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class WeatherVC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
