@@ -791,13 +791,54 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJs-pu-04L">
+                                <rect key="frame" x="20" y="41" width="360" height="150"/>
+                                <clipView key="contentView" drawsBackground="NO" id="pZn-5u-hMu">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="150"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="qho-Kd-Mi8">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" scrollDirection="horizontal" id="evL-KO-bdI">
+                                                <size key="itemSize" width="125" height="125"/>
+                                                <edgeInsets key="sectionInset" left="10" right="10" top="0.0" bottom="0.0"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vEL-mx-rD7"/>
+                                </constraints>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="3fn-jj-f5i">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="jJF-aU-r6y">
+                                    <rect key="frame" x="344" y="0.0" width="16" height="150"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hJs-pu-04L" secondAttribute="trailing" constant="20" id="1oo-2d-frf"/>
+                            <constraint firstItem="hJs-pu-04L" firstAttribute="top" secondItem="7Yc-Ie-9sn" secondAttribute="bottom" constant="20" id="ETK-pM-7rF"/>
                             <constraint firstItem="7Yc-Ie-9sn" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="HMy-0I-42A"/>
                             <constraint firstAttribute="trailing" secondItem="7Yc-Ie-9sn" secondAttribute="trailing" constant="20" id="icf-S6-xNi"/>
+                            <constraint firstItem="hJs-pu-04L" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="lGw-iv-s2j"/>
                             <constraint firstItem="7Yc-Ie-9sn" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="nab-Zs-99p"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="qho-Kd-Mi8" id="vPj-n7-Ote"/>
+                        <outlet property="dateLbl" destination="Pps-rz-ZW5" id="eYI-GK-JKl"/>
+                        <outlet property="locationLbl" destination="xCj-lH-gGP" id="hiJ-F6-d1L"/>
+                        <outlet property="tempLbl" destination="CUW-eu-prp" id="Add-2S-a8h"/>
+                        <outlet property="weatherConditionLbl" destination="nw0-st-H1n" id="NSS-lu-zn6"/>
+                        <outlet property="weatherImg" destination="D9j-lb-ciP" id="fde-Q7-VGg"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
